@@ -20,13 +20,14 @@ Coisas à fazer:
 
 
 Fundamentais:
+[ ] Transformar em Extensão do Chrome
 [ ] Colocar Data e hora nas tasks
 [ ] Despertador
 [ ] Cronômetro
 [ ] Timer
 [ ] Minimizar/abrir --- [ ] X 
 [ ] Aumentar ou diminuir Caixa
-	[ ] Config - [x] On/Off
+	[ ] Config - [x] On/Off ⚙
 [ ] fixar tasks para a url atual (quando o user fizer isso, as tasks ficarão gravadas só pra aquele link)
 [ ] Tasks Gerais, disponíveis para todas as páginas 
 	[ ] Fazer um Menu com as Tasks |Página atual|Domínio|Geral|
@@ -55,16 +56,24 @@ Detalhes:
 	[ ] criar task
 	[ ] resetar cookies
 	[ ] reiniciar posição do popUp
-	[ ] Abrir config
+	[ ] Abrir config ⚙
 		[ ] Sair da config 
-			[ ] Cancelar
+			[ ] Cancelar 
 			[ ] Salvar alterações
 	Bônus:
-		[ ] Editar Título
+		[ ] Editar Título 
 
 
 
 Bônus: 
+[ ] iframe com link oferecido pelo usuário
+	[ ] é possível programar um horário para dispach e deixar o pop-up mostrando um iframe de alguma página 
+		[ ] Churchofjesuschrist.org -> Escrituras
+		[ ] YouTube -> Vídeos em Geral
+		//[ ] facebook, pinterest, instagram e redes sociais em geral  -> Autoscroll down (*pensar sobre ideia)
+			[ ] Limitar um horário (max 60 min)
+			[ ] programar até 4x por dia de aparecer
+[ ] notificações de outros apps (Como vou fazer isso? Não faço ideia, só está aí a ideia 🙃)
 [ ] Ferramenta de Desenhar nas páginas
 [ ] Fechador de link
 [ ]Salvar global (não só cookies)	
@@ -679,7 +688,7 @@ function popUp_create_4002(){
 	document.getElementById("pop_up_4002").appendChild(script);
 	//document.write("<h1 id='is-this-what-you-looking-for'>Hello member</h1>');
 	var style = document.createElement("style");
-	style.innerHTML="#pop_up_4002{cursor: move;}#button_config{margin-left:8px;margin-rigth:8px;}#pop_up_4002{display:grid;}.div_task{width:100%;display: flex;}#div_tasks>i{text-align: center;}#div_tasks{max-width:max-content}#div_tasks>i:hover{background:rgba(200,200,200,0.5)}button:hover{background:rgba(200,200,200,0.5)}button{background:none;border:none}.hover-background:hover{background:rgba(200,200,200,0.5);cursor:pointer;}#header_title:hover{background:rgba(200,200,200,0.5);} .del_button_4002:hover{background:gray;} .background-color {    width: 500px;    height: 500px;    background: red;    opacity: .5;}#div_tasks{width:100%;display:grid;}.POINTER{cursor:pointer}";
+	style.innerHTML="#pop_up_4002{cursor: move;}#button_config{margin-left:8px;margin-rigth:8px;}#pop_up_4002{display:grid;}.div_task{width:100%;display: flex;}#div_tasks>i{text-align: center;}#div_tasks{max-width:max-content}#div_tasks>i:hover{background:rgba(200,200,200,0.5)}.button_4002:hover{background:rgba(200,200,200,0.5)}.button_4002{background:none;border:none}.hover-background:hover{background:rgba(200,200,200,0.5);cursor:pointer;}#header_title:hover{background:rgba(200,200,200,0.5);} .del_button_4002:hover{background:gray;} .background-color {    width: 500px;    height: 500px;    background: red;    opacity: .5;}#div_tasks{width:100%;display:grid;}.POINTER{cursor:pointer}";
 	var  script_injection = document.createElement("head4002");
 	script_injection.innerHTML ="<link href='https://cdn.lineicons.com/2.0/LineIcons.css' rel='stylesheet'><script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>"; /*o crossdomain está AQUI é o LineIcons, só para os ícones do Pop-UP*/
 
@@ -804,6 +813,7 @@ function popUp_create_4002(){
 	var button_add_task = document.createElement("button");
 	button_add_task.innerHTML="+";
 	button_add_task.onclick=add_task(contador_num_task("",false));
+	button_add_task.classList.add("button_4002");
 	button_add_task.id="add_task_button_4002";
 	button_add_task.style.background="none";
 	button_add_task.style.border ="none";

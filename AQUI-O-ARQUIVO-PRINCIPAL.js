@@ -6,11 +6,11 @@
 // @version        1.0
 // ==/UserScript==
 
-/* @Observations   1 - !!!!! Sometimes the css of pages can crash the style of the pop-UP.
+/* @Observations   1 - ! Sometimes the css of pages can crash the style of the pop-UP.
 
-2 - !!!style Will crash in some pages, like github and Google because script security: "Refused to execute inline event handler because it violates the following Content Security Policy directive: "script-src github.githubassets.com". Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution."
+2 - !!! style Will crash in some pages, like github and Google because script security: "Refused to execute inline event handler because it violates the following Content Security Policy directive: "script-src github.githubassets.com". Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution."
 
-
+3 - !!! This happens to: Refused to execute inline event handler because it violates the following Content Security Policy directive: "script-src github.githubassets.com". Either the 'unsafe-inline' keyword, a hash ('sha256-...'), or a nonce ('nonce-...') is required to enable inline execution.
 
 */
 
@@ -804,11 +804,9 @@ function popUp_create_4002(){
 	var config_especific_paths = document.createElement("textarea");
 	config_especific_paths.id="config_especific_paths";
 	config_especific_paths.placeholder="Se tem alguma página em específico que queira separar as tarefas da página com o do domínio principal, cole o link aqui";
-	if(getCookie("config_especific_paths")!=""){
-		config_especific_paths.value=getCookie("config_especific_paths");
-	}else{
-		config_especific_paths.value="";
-	}
+	
+	config_especific_paths.value=getCookie("config_especific_paths");
+	
 	config_pu.appendChild(config_especific_paths);
 	config_pu.hidden=true;
 	pop_up.appendChild(config_pu);

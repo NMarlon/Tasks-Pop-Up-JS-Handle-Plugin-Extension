@@ -34,8 +34,10 @@ Fundamentais:
 [ ] Permitir adicionar imagem e som
 [ ] configurações globais ou locais [X]
 	[ ] adicionar href das config locais
-
-
+[ ] Config ⚙
+	[ ] Alterar teclas de atalho.
+		[ ] Ctrl+F10 => Resetar posição do Pop-Up
+ 
 
 Bugs:
 [ ] - Fazer aparecer só uma janela por página 
@@ -356,8 +358,11 @@ var bool_Check_path_alert=false;
 
 
 shortcut.add("Ctrl+F10", function() {
-    alert("Ctrl Shift A pressed");
+    alert("Ctrl+F10 pressionado! Reiniciando posição do Pop-Up Tasks!");
+    document.getElementById('pop_up_4002').style.top="0";
+    document.getElementById('pop_up_4002').style.left="0";
 });
+
 
 
 var reset_all_Cookies =function reset_all_Cookies(){ //Somente os da página

@@ -85,7 +85,7 @@ Bônus:
 		[ ] Login com Google
 			Bônus
 				[ ] App pra celular (?? será que teria alguma serventia de usar um pop-up?... O mais próximo seria um Google Keep e usar as notificações como o visualizador, ao invés do pop-up)
-[ ] Conversor de moeda (só se tiver como uma função complementar... Só ser conversor de moedas não tem muita serventia, procuro algo a mais)
+
 
 
 
@@ -681,16 +681,16 @@ function popUp_create_4002(){
 
 
 
-	var script = document.createElement("script");
+	/*var script = document.createElement("script");
 
 	try{
 		script.innerHTML=change_title_func+Done_title_change+getCookie+createCookie+config+add_task+edit_task+exit_edit_task+check_path+contador_num_task+contador_tasks;
 	}catch(e){
 		console.error("Erro de sintaxe na declaração das funções. ErroX0001");
-	}
+	}*/
 
 
-	document.getElementById("pop_up_4002").appendChild(script);
+    //pop_up.appendChild(script);
 	//document.write("<h1 id='is-this-what-you-looking-for'>Hello member</h1>');
 	var style = document.createElement("style");
 	style.innerHTML="#pop_up_4002{cursor: move;}#button_config{margin-left:8px;margin-rigth:8px;}#pop_up_4002{display:grid;}.div_task{width:100%;display: flex;}#div_tasks>i{text-align: center;}#div_tasks{max-width:max-content}#div_tasks>i:hover{background:rgba(200,200,200,0.5)}.button_4002:hover{background:rgba(200,200,200,0.5)}.button_4002{background:none;border:none}.hover-background:hover{background:rgba(200,200,200,0.5);cursor:pointer;}#header_title:hover{background:rgba(200,200,200,0.5);} .del_button_4002:hover{background:gray;} .background-color {    width: 500px;    height: 500px;    background: red;    opacity: .5;}#div_tasks{width:100%;display:grid;}.POINTER{cursor:pointer}";
@@ -698,7 +698,7 @@ function popUp_create_4002(){
 	script_injection.innerHTML ="<link href='https://cdn.lineicons.com/2.0/LineIcons.css' rel='stylesheet'><script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>"; /*o crossdomain está AQUI é o LineIcons, só para os ícones do Pop-UP*/
 
 
-	document.getElementById("pop_up_4002").parentNode.insertBefore(script,pop_up);
+	//document.getElementById("pop_up_4002").parentNode.insertBefore(script,pop_up);
 	document.getElementById("pop_up_4002").parentNode.insertBefore(style,pop_up);
 
 	document.body.parentNode.insertBefore(script_injection,document.getElementsByTagName("body")[0]);
